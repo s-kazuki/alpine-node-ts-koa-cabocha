@@ -44,7 +44,7 @@ RUN apk add --update --no-cache build-base \
 && mecab -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd \
 \
 # Installing crf++
-&& curl -L -o ${APP_ROOT}/CRF++-${CRFPP_VERSION}.tar.gz 'https://drive.google.com/uc?export=download&id=${CRFPP_FILE_ID}' \
+&& curl -L -o ${APP_ROOT}/CRF++-${CRFPP_VERSION}.tar.gz "https://drive.google.com/uc?export=download&id=${CRFPP_FILE_ID}" \
 && cd ${APP_ROOT} && tar -zxf CRF++-${CRFPP_VERSION}.tar.gz \
 && cd ${APP_ROOT}/CRF++-${CRFPP_VERSION} \
 && ./configure \
