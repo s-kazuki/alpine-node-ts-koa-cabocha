@@ -1,4 +1,4 @@
-FROM node:10.14-alpine
+FROM node:10.15-alpine
 
 LABEL maintainer="S-Kazuki<contact@revoneo.com>"
 
@@ -69,7 +69,7 @@ RUN apk add --update --no-cache build-base \
 && rm -rf ${APP_ROOT}/cabocha-* \
 \
 # Installing node modules
-&& cd ${APP_ROOT} && npm install \
+&& cd ${APP_ROOT} && npm ci \
 && npm cache clean --force \
 \
 && apk add --update --no-cache tzdata \
